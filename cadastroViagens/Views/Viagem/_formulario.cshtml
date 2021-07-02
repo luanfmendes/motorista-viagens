@@ -1,0 +1,29 @@
+﻿@model Viagem
+
+    <div class="form-group">
+        <label>Data e hora</label>
+        <input asp-for="DataHoraViagem" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Local de Entrega:</label>
+        <input asp-for="LocalEntrega" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label>Local de Saída:</label>
+        <input asp-for="LocalSaida" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label>Km total entre as cidades:</label>
+        <input asp-for="KmTotalEntreCidades" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label>Selecione o Motorista para a viagem</label>
+        <select asp-for="MotoristaId" class="form-control" asp-items="@ViewBag.combo">
+            <option>Selecione</option>
+        </select>
+    </div>
+
+
